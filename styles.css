@@ -34,6 +34,10 @@ body {
   width: 100%;
   height: 100%;
   background: url('data/faltkarta_kynning_2.jpg') center/contain no-repeat;
+  background-image: image-set(
+    url('data/faltkarta_kynning_2.webp') type('image/webp'),
+    url('data/faltkarta_kynning_2.jpg') type('image/jpeg')
+  );
   border-radius: 16px;
 }
 
@@ -74,6 +78,23 @@ body {
 .panel-header p {
   margin: 8px 0 0;
   font-size: 18px;
+}
+
+.panel-header {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 36px;
+}
+
+.panel-title {
+  min-width: 0;
+}
+
+.panel-logo {
+  width: 68px;
+  height: auto;
+  flex: 0 0 auto;
 }
 
 .buttons {
@@ -176,9 +197,14 @@ li {
 }
 
 .feedback-section {
-  margin-top: 6px;
+  margin-top: 10px;
   border-top: 2px solid #6a746d;
-  padding-top: 0px;
+  padding-top: 10px;
+}
+
+.feedback-section h2 {
+  margin-top: 6px;
+  margin-bottom: 10px;
 }
 
 .feedback-form {
@@ -321,5 +347,8 @@ footer {
 
 .inskjut {
   padding-left: 12px;
+  list-style: none;
+}
+.punktfri {
   list-style: none;
 }
