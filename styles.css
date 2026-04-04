@@ -1,0 +1,164 @@
+﻿:root {
+  --green: #2e7d32;
+  --text: #222;
+  --bg: #f4f6f3;
+  --panel: #ffffff;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+}
+
+.layout {
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: 1.4fr 1fr 1fr;
+}
+
+.left-image {
+  background: url('data/faltkarta_kynning_2.jpg') center/contain no-repeat;
+  background-color: #1d2a1f;
+}
+
+.info-panel,
+.action-panel {
+  background: var(--panel);
+  padding: 32px 28px 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.panel-inner {
+  max-width: 520px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.panel-header h1 {
+  margin: 0;
+  font-size: 40px;
+}
+
+.panel-header p {
+  margin: 8px 0 0;
+  font-size: 18px;
+}
+
+.buttons {
+  margin: 20px 0 0;
+}
+
+.btn {
+  display: inline-block;
+  padding: 12px 20px;
+  margin: 8px 8px 0 0;
+  border-radius: 8px;
+  border: 2px solid transparent;
+  text-decoration: none;
+  font-weight: bold;
+  cursor: pointer;
+  background: #fff;
+  color: var(--green);
+}
+
+.btn.download {
+  background: var(--green);
+  color: #fff;
+}
+
+.btn.donate {
+  border-color: var(--green);
+}
+
+.btn.is-active {
+  box-shadow: 0 0 0 3px rgba(46, 125, 50, 0.2);
+}
+
+.action-panel .buttons {
+  position: sticky;
+  top: 0;
+  background: var(--panel);
+  padding-bottom: 14px;
+  z-index: 2;
+}
+
+.action-section {
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+  transform: translateY(6px);
+  transition: max-height 0.35s ease, opacity 0.25s ease, transform 0.25s ease;
+}
+
+.action-section.is-visible {
+  max-height: 2000px;
+  opacity: 1;
+  transform: none;
+}
+
+h2 {
+  margin-top: 26px;
+}
+
+ul {
+  line-height: 1.7;
+}
+
+.qr {
+  text-align: center;
+  margin: 20px 0 10px;
+}
+
+.qr img {
+  max-width: 200px;
+}
+
+.qr p {
+  margin-top: 10px;
+  color: #444;
+  font-size: 14px;
+}
+
+footer {
+  margin-top: auto;
+  font-size: 14px;
+  color: #666;
+  padding-top: 20px;
+}
+
+@media (max-width: 1200px) {
+  .layout {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .info-panel {
+    grid-column: span 1;
+  }
+
+  .action-panel {
+    grid-column: span 1;
+  }
+
+  .left-image {
+    min-height: 45vh;
+    grid-column: span 2;
+  }
+}
+
+@media (max-width: 700px) {
+  .layout {
+    grid-template-columns: 1fr;
+  }
+
+  .left-image {
+    min-height: 35vh;
+    grid-column: span 1;
+  }
+}
