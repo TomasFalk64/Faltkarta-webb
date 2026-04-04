@@ -10,7 +10,9 @@
 <body>
 
 <div class="layout">
-  <div class="left-image" aria-hidden="true"></div>
+  <div class="left-image" aria-hidden="true">
+    <div class="left-image-inner"></div>
+  </div>
 
   <main class="info-panel">
     <div class="panel-inner">
@@ -21,20 +23,19 @@
 
       <section id="info" class="info-section">
         <h2>Vad appen gör</h2>
-        <p>
-          Fältkarta är en mobilapp för att dokumentera artobservationer direkt i fält,
-          självklart även utan uppkoppling. Du kan använda egna kartor eller ladda ner från tex Skogsmonitor.se. 
-          När du är färdig exporterar du direkt till Artportalen eller till din dator,
-          utan konvertering.
-        </p>
+        <p>Fältkarta är en mobilapp för att dokumentera artobservationer direkt i fält, självklart även utan uppkoppling.</p>
+        <p>Du kan använda egna kartor eller ladda ner från tex Skogsmonitor.se.</p>
+        <p>När du är färdig exporterar du direkt till Artportalen eller till din dator, utan konvertering.</p>
+
+
 
         <h2>Funktioner</h2>
         <ul>
-          <li><b>Enkel registrering:</b> Snabbt formulär med artförslag</li>
-          <li><b>Egna kartor:</b> Importera valfritt antal GeoTIFF</li>
-          <li><b>GPS:</b> Justerbar GPS-frekvens och valfri bakgrundspositionering</li>
-          <li><b>Bilder:</b> Bilder namnges med art och tidpunkt, vilket underlättar export till Artportalen eller när du vill göra en rapport</li>
-          <li><b>Polygoner:</b> Importera eller rita egna inventeringsområden</li>
+          <li><b>Enkel registrering:</b> Snabbt formulär med artförslag. Skriv <i>fyr</i> och välj <i>Fyrflikig jordstjärna.</i></li>
+          <li><b>Egna kartor:</b> Importera valfritt antal GeoTIFF.</li>
+          <li><b>GPS:</b> Justerbar GPS-frekvens och valfri bakgrundspositionering gör att appen behåller kontakten med satelliterna även när skärmen är släckt</li>
+          <li><b>Bilder:</b> Bilder namnges med art och tidpunkt, vilket underlättar export till Artportalen eller när du vill göra en rapport.</li>
+          <li><b>Polygoner:</b> Importera eller rita egna inventeringsområden.</li>
         </ul>
 
         <h2>Export</h2>
@@ -42,21 +43,32 @@
           <li><b>Artportalen:</b> Direkt utan konvertering</li>
           <li><b>Excel:</b> För vidare bearbetning</li>
           <li><b>GeoJSON:</b> För QGIS</li>
-          <li><b>ZIP:</b> Karta + data + bilder</li>
+          <li><b>ZIP:</b> Exportera en komprimerad zip-fil med <b>karta + data + bilder</b> och skicka den till din dator.</li>
         </ul>
 
         <h2>Extra</h2>
         <ul>
-          <li>Komplettera och spara egna artförslag</li>
-          <li>Kort artinfo om utvalda arter</li>
+          <li>Komplettera med och spara egna artförslag.</li>
+          <li>Kort artinfo om utvalda arter.</li>
+          <li class="inskjut"> <b>Vågbandad barkbock</b> <b>LC</b>s <br> <i> På död gran. Larvgångar med skarp kant 5 mm. Ovalt kläckhål 4mm</i> </li>
         </ul>
 
         <h2>Teknik</h2>
         <ul>
+          <li>Än så länge finns appen bara för Android. <br></li>
+          <li class="inskjut"> Iphone-version kommer inom kort</li>
+          <li class="inskjut"></li>
           <li>WGS84 (lat/lon)</li>
           <li>SWEREF 99 TM </li>
           <li>ESPG:3857 pseudomercator </li>
           <li>Stöd för EPSG:3006, 3857 och 4326</li>
+        </ul>
+
+        <h2>Licens</h2>
+        <ul>
+          <li>Detta projekt är licensierat under MIT License.</li>
+          <li>Det innebär att det är fritt för var och en att ladda ner och använda appen.</li>
+          <li></li>
         </ul>
       </section>
     </div>
@@ -96,6 +108,20 @@
           <p>Skanna QR-koden för att donera via Swish.</p>
         </div>
       </section>
+
+      <section class="feedback-section" aria-labelledby="feedback-title">
+        <h2 id="feedback-title">Ge feedback</h2>
+        <form class="feedback-form" action="mailto:klafsamot@gmail.com" method="post" enctype="text/plain">
+          <label class="sr-only" for="feedback-input">Din kommentar</label>
+          <textarea id="feedback-input" name="feedback" rows="3" placeholder="Skriv din kommentar..."></textarea>
+          <button class="btn download" type="submit">Skicka via e‑post</button>
+        </form>
+
+        <h3 class="comment-title">Kommentarer</h3>
+        <div class="comment-log" id="comment-log" aria-label="Kommentarer">
+          <p class="comment-empty">Inga kommentarer ännu.</p>
+        </div>
+      </section>
     </div>
 
     <footer>
@@ -120,6 +146,38 @@
   buttons.forEach((btn) => {
     btn.addEventListener('click', () => showSection(btn.dataset.target));
   });
+
+  const commentLog = document.getElementById('comment-log');
+
+  fetch('data/kommentarer.txt')
+    .then((res) => res.ok ? res.text() : '')
+    .then((text) => {
+      const comments = text
+        .split('\n')
+        .map((line) => line.trim())
+        .filter((line) => line.length > 0);
+
+      commentLog.innerHTML = '';
+
+      if (comments.length === 0) {
+        commentLog.innerHTML = '<p class="comment-empty">Inga kommentarer ännu.</p>';
+        return;
+      }
+
+      comments.forEach((line) => {
+        const wrapper = document.createElement('div');
+        wrapper.className = 'comment';
+
+        const p = document.createElement('p');
+        p.textContent = line;
+
+        wrapper.appendChild(p);
+        commentLog.appendChild(wrapper);
+      });
+    })
+    .catch(() => {
+      commentLog.innerHTML = '<p class="comment-empty">Inga kommentarer ännu.</p>';
+    });
 </script>
 
 </body>
