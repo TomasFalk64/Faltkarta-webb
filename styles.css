@@ -20,6 +20,8 @@ body {
   min-height: 100vh;
   display: grid;
   grid-template-columns: 1.8fr 0.9fr 0.8fr;
+  position: relative;
+  padding-right: 24px;
 }
 
 .left-image {
@@ -59,6 +61,16 @@ body {
   display: flex;
   flex-direction: column;
   height: 100%;
+}
+
+.layout::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 24px;
+  height: 100%;
+  background: #1d2a1f;
 }
 
 .action-panel {
@@ -337,12 +349,17 @@ footer {
 @media (max-width: 700px) {
   .layout {
     grid-template-columns: 1fr;
+    padding-right: 0;
   }
 
   .left-image {
     min-height: 60vh;
     grid-column: span 1;
     padding: 10px;
+  }
+
+  .layout::after {
+    display: none;
   }
 }
 
