@@ -240,6 +240,12 @@ li {
   font-size: 13px;
 }
 
+.form-status {
+  margin-top: 10px;
+  font-weight: bold;
+  font-size: 13px;
+}
+
 .comment-log {
   margin-top: 16px;
   max-height: 100px;

@@ -121,10 +121,10 @@
 
       <section class="feedback-section" aria-labelledby="feedback-title">
         <h2 id="feedback-title">Ge feedback</h2>
-        <form class="feedback-form" action="https://formspree.io/f/mbdpppjl" method="POST">
+        <form class="feedback-form" id="my-form" action="https://formspree.io/f/mbdpppjl" method="POST">
           <label class="sr-only" for="feedback-input">Din kommentar</label>
           <input type="hidden" name="_subject" value="Ny feedback på Fältkartan!">
-          <input type="hidden" name="_next" value="https://tomasfalk64.github.io/Faltkarta-webb/">
+          
           <textarea 
             id="feedback-input" 
             name="message" 
@@ -132,7 +132,10 @@
             placeholder="Skriv din kommentar..." 
             required
           ></textarea>
-          <button class="btn download" type="submit">Skicka feedback</button>
+          
+          <button class="btn download" id="my-form-button" type="submit">Skicka feedback</button>
+          
+          <p id="my-form-status" class="form-status"></p>
         </form>
 
         <h3 class="comment-title">Kommentarer</h3>
@@ -196,6 +199,53 @@
     .catch(() => {
       commentLog.innerHTML = '<p class="comment-empty">Inga kommentarer ännu.</p>';
     });
+
+  
+  var form = document.getElementById("my-form");
+  
+  async function handleSubmit(event) {
+    event.preventDefault(); // Hindrar sidan från att laddas om
+    var status = document.getElementById("my-form-status");
+    var data = new FormData(event.target);
+    
+    // Inaktivera knappen under skickning
+    var button = document.getElementById("my-form-button");
+    button.disabled = true;
+    button.innerText = "Skickar...";
+
+    fetch(event.target.action, {
+      method: form.method,
+      body: data,
+      headers: {
+          'Accept': 'application/json'
+      }
+    }).then(response => {
+      if (response.ok) {
+        status.innerHTML = "Skickat. Tack för din feedback!";
+        status.style.color = "green";
+        form.reset(); // Tömmer textrutan
+      } else {
+        response.json().then(data => {
+          if (Object.hasOwn(data, 'errors')) {
+            status.innerHTML = data["errors"].map(error => error["message"]).join(", ");
+          } else {
+            status.innerHTML = "Hoppsan! Det gick inte att skicka just nu.";
+          }
+          status.style.color = "red";
+        })
+      }
+      // Återställ knappen
+      button.disabled = false;
+      button.innerText = "Skicka feedback";
+    }).catch(error => {
+      status.innerHTML = "Hoppsan! Det uppstod ett nätverksfel.";
+      status.style.color = "red";
+      button.disabled = false;
+      button.innerText = "Skicka feedback";
+    });
+  }
+  
+  form.addEventListener("submit", handleSubmit)
 </script>
 
 </body>
