@@ -121,10 +121,18 @@
 
       <section class="feedback-section" aria-labelledby="feedback-title">
         <h2 id="feedback-title">Ge feedback</h2>
-        <form class="feedback-form" action="mailto:klafsamot@gmail.com" method="post" enctype="text/plain">
+        <form class="feedback-form" action="https://formspree.io/f/mbdpppjl" method="POST">
           <label class="sr-only" for="feedback-input">Din kommentar</label>
-          <textarea id="feedback-input" name="feedback" rows="3" placeholder="Skriv din kommentar..."></textarea>
-          <button class="btn download" type="submit">Skicka via e‑post</button>
+          <input type="hidden" name="_subject" value="Ny feedback på Fältkartan!">
+          <input type="hidden" name="_next" value="https://tomasfalk64.github.io/Faltkarta-webb/">
+          <textarea 
+            id="feedback-input" 
+            name="message" 
+            rows="3" 
+            placeholder="Skriv din kommentar..." 
+            required
+          ></textarea>
+          <button class="btn download" type="submit">Skicka feedback</button>
         </form>
 
         <h3 class="comment-title">Kommentarer</h3>
