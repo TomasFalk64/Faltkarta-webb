@@ -166,6 +166,15 @@ body {
   color: #fff;
 }
 
+.action-panel .action-section .buttons {
+  margin-top: 0px;
+}
+
+.action-panel .action-section .btn.download {
+  padding: 6px 12px;
+  font-size: 13px;
+}
+
 .action-section {
   max-height: 0;
   opacity: 0;
@@ -195,7 +204,7 @@ li {
 
 .qr {
   text-align: center;
-  margin: 20px 0 10px;
+  margin: 20px 0 0px;
 }
 
 .qr img {
@@ -232,6 +241,7 @@ li {
   border: 1px solid #c9c9c9;
   font-family: inherit;
   font-size: 14px;
+  margin-bottom: 2px;
 }
 
 .feedback-email {
@@ -241,12 +251,25 @@ li {
   border: 1px solid #c9c9c9;
   font-family: inherit;
   font-size: 14px;
-  margin-bottom: 6px;
+  margin-bottom: 4px;
 }
 
 .feedback-form .btn {
-  justify-self: end;
   padding: 6px 12px;
+  font-size: 13px;
+}
+
+.feedback-actions {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-top: 0;
+}
+
+.form-status {
+  margin: 0;
+  font-weight: bold;
   font-size: 13px;
 }
 
