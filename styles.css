@@ -168,11 +168,16 @@ body {
 
 .action-panel .action-section .buttons {
   margin-top: 0px;
+  text-align: center;
 }
 
 .action-panel .action-section .btn.download {
   padding: 6px 12px;
   font-size: 13px;
+}
+
+.action-panel .action-section .buttons .btn {
+  margin: 0;
 }
 
 .action-section {
@@ -204,7 +209,7 @@ li {
 
 .qr {
   text-align: center;
-  margin: 20px 0 0px;
+  margin: 20px 0 3px;
 }
 
 .qr img {
