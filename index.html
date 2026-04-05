@@ -29,7 +29,7 @@
           <a href="#info">Info</a>
           <a href="#feedback">Feedback</a>
           <a href="#donate">Donera</a>
-          <a href="#credits">Credits</a>
+          <a href="#credits">Om appen</a>
         </nav>
       </div>
       <img class="brand-logo" src="data/logga_%20ek%20och%20hexagon.png" alt="Logga" />
@@ -65,50 +65,60 @@
     </section>
 
     <section id="info" class="card">
-      <h2>Vad appen gör</h2>
-      <p>Fältkarta är en mobilapp för att dokumentera artobservationer direkt i fält, självklart även utan uppkoppling.</p>
-      <p>Du kan använda egna kartor eller ladda ner från t.ex. Skogsmonitor.se.</p>
-      <p>När du är färdig exporterar du direkt till Artportalen eller till din dator, utan konvertering.</p>
+      <div class="info-layout">
+        <div class="info-main">
+          <h2>Vad appen gör</h2>
+          <p>Fältkarta är en mobilapp för att dokumentera artobservationer direkt i fält, självklart även utan uppkoppling.</p>
+          <p>Du kan använda egna kartor eller ladda ner från t.ex. Skogsmonitor.se.</p>
+          <p>När du är färdig exporterar du direkt till Artportalen eller till din dator. Ingen extra konvertering behövs.</p>
 
-      <h2>Funktioner</h2>
-      <ul>
-        <li><b>Enkel registrering:</b> Snabbt formulär med artförslag. Skriv t.ex. <i>fy</i> och välj <i>Fyrflikig jordstjärna.</i></li>
-        <li><b>Egna kartor:</b> Importera valfritt antal GeoTIFF.</li>
-        <li><b>GPS:</b> Justerbar GPS-frekvens och valfri bakgrundspositionering gör att appen behåller kontakten med satelliterna även när skärmen är släckt</li>
-        <li><b>Bilder:</b> Bilder namnges med art och tidpunkt, vilket underlättar export till Artportalen eller när du vill göra en rapport.</li>
-        <li><b>Polygoner:</b> Importera eller rita egna inventeringsområden.</li>
-      </ul>
+          <h2>Funktioner</h2>
+          <ul>
+            <li><b>Enkel registrering:</b> Snabbt formulär med artförslag. Skriv t.ex. <i>bl</i> och välj <i>Blanksvart spiklav.</i></li>
+            <li><b>Egna kartor:</b> Importera valfritt antal GeoTIFF.</li>
+            <li><b>GPS:</b> Justerbar GPS-frekvens och valfri bakgrundspositionering gör att appen behåller kontakten med satelliterna även när skärmen är släckt</li>
+            <li><b>Bilder:</b> Bilder namnges med art och tidpunkt, vilket underlättar export till Artportalen eller när du vill göra en rapport.</li>
+            <li><b>Polygoner:</b> Importera eller rita egna inventeringsområden.</li>
+          </ul>
 
-      <h2>Export</h2>
-      <ul>
-        <li><b>Artportalen:</b> Direkt utan konvertering</li>
-        <li><b>Excel:</b> För vidare bearbetning</li>
-        <li><b>GeoJSON:</b> För QGIS</li>
-        <li><b>ZIP:</b> Exportera en komprimerad zip-fil med <b>karta + data + bilder</b> och skicka den till din dator.</li>
-      </ul>
+          <h2>Export</h2>
+          <ul>
+            <li><b>Artportalen:</b> Direkt utan konvertering</li>
+            <li><b>Excel:</b> För vidare bearbetning</li>
+            <li><b>GeoJSON:</b> För QGIS</li>
+            <li><b>ZIP:</b> Exportera en komprimerad zip-fil med <b>karta + data + bilder</b> och skicka den till din dator.</li>
+          </ul>
 
-      <h2>Extra</h2>
-      <ul>
-        <li>Komplettera med och spara egna artförslag.</li>
-        <li>Kort artinfo om utvalda arter.</li>
-        <li class="inskjut"> <b>Vågbandad barkbock</b> <b>LC</b> <br> <i> På död gran. Larvgångar med skarp kant 5 mm. Ovalt kläckhål 4mm</i> </li>
-      </ul>
+          <h2>Extra</h2>
+          <ul>
+            <li>Komplettera med och spara egna artförslag.</li>
+            <li>Kort artinfo om utvalda arter.</li>
+            <li class="inskjut">T.ex. :</li>
+            <li class="inskjut"> <b>Vågbandad barkbock</b> <b>LC</b> <br> <i> På död gran. Larvgångar med skarp kant 5 mm. Ovalt kläckhål 4mm</i> </li>
+          </ul>
 
-      <h2>Teknik</h2>
-      <ul>
-        <li>Än så länge finns appen bara för Android.</li>
-        <li class="inskjut"> <b><i>iPhone-version kommer efterhand</i></b></li>
-        <li>WGS84 (lat/lon)</li>
-        <li>SWEREF 99 TM</li>
-        <li>EPSG:3857 pseudomercator</li>
-        <li>Stöd för EPSG:3006, 3857 och 4326</li>
-      </ul>
+          <h2>Teknik</h2>
+          <ul>
+            <li>Än så länge finns appen bara för Android.</li>
+            <li class="inskjut"> <b><i>iPhone-version kommer efterhand</i></b></li>
+            <li>WGS84 (lat/lon)</li>
+            <li>SWEREF 99 TM</li>
+            <li>EPSG:3857 pseudomercator</li>
+            <li>Stöd för EPSG:3006, 3857 och 4326</li>
+          </ul>
 
-      <h2>Licens</h2>
-      <ul>
-        <li>Detta projekt är licensierat under MIT License. vilket betyder:</li>
-        <li class="punktfri">Varsågoda att använda min app hur ni vill. Jag tar inget ansvar för vad som händer, och ni måste tala om att det är jag som skapat den ursprungliga koden, om ni utvecklar den vidare.</li>
-      </ul>
+          <h2>Licens</h2>
+          <ul>
+            <li>Detta projekt är licensierat under MIT License. vilket betyder:</li>
+            <li class="punktfri">Varsågoda att använda min app hur ni vill. Jag tar inget ansvar för vad som händer utan litar på att appen används för godhjörtade ändamål, och ni måste tala om att det är jag som skapat den ursprungliga koden, om ni utvecklar den vidare.</li>
+          </ul>
+        </div>
+        <aside class="info-side" aria-label="Skärmbilder">
+          <img src="data/Screenshot_20260405_162735_Fltkarta.jpg" alt="Skärmbild av Fältkarta">
+          <img src="data/Screenshot_20260405_161929_Fltkarta.jpg" alt="Skärmbild av Fältkarta">
+          <img src="data/Screenshot_20260405_163516_Fltkarta.jpg" alt="Skärmbild av Fältkarta">
+        </aside>
+      </div>
     </section>
 
     <section id="feedback" class="card feedback-section" aria-labelledby="feedback-title">
@@ -159,10 +169,11 @@
     </section>
 
     <section id="credits" class="card">
-      <h2>Credits</h2>
+      <h2>Om Appen</h2>
       <ul>
-        <li><b>Utvecklad av:</b> AI-agenten Codex (OpenAI)</li>
-        <li><b>Styrd av:</b> Tomas Falk</li>
+        <li><b>Idé & Design: </b>Tomas Falk</li>
+        <li><b>Programmering & Prompting: </b>Tomas Falk</li>
+        <li>Utvecklad med hjälp av AI-agenten Codex (OpenAI) och Google Gemini</li>
       </ul>
     </section>
   </main>
