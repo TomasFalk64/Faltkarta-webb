@@ -15,167 +15,164 @@
 </head>
 
 <body>
-
-<div class="layout">
-  <div class="left-image" aria-hidden="true">
-    <div class="left-image-inner"></div>
-  </div>
-
-  <main class="info-panel">
-    <div class="panel-inner">
-      <header class="panel-header">
-        <div class="panel-title">
-          <h1>Fältkarta</h1>
-          <p>Artobservationer i mobilen</p>
+  <header class="site-header">
+    <div class="header-wrap">
+      <div class="header-block">
+        <div class="header-inner">
+          <div class="brand">
+            <h1>Fältkarta</h1>
+            <p>Artobservationer i mobilen</p>
+          </div>
         </div>
-        <img class="panel-logo" src="data/logga_%20ek%20och%20hexagon.png" alt="Logga" />
-      </header>
-
-      <section id="info" class="info-section">
-        <h2>Vad appen gör</h2>
-        <p>Fältkarta är en mobilapp för att dokumentera artobservationer direkt i fält, självklart även utan uppkoppling.</p>
-        <p>Du kan använda egna kartor eller ladda ner från tex Skogsmonitor.se.</p>
-        <p>När du är färdig exporterar du direkt till Artportalen eller till din dator, utan konvertering.</p>
-
-
-
-        <h2>Funktioner</h2>
-        <ul>
-          <li><b>Enkel registrering:</b> Snabbt formulär med artförslag. Skriv tex <i>fy</i> och välj <i>Fyrflikig jordstjärna.</i></li>
-          <li><b>Egna kartor:</b> Importera valfritt antal GeoTIFF.</li>
-          <li><b>GPS:</b> Justerbar GPS-frekvens och valfri bakgrundspositionering gör att appen behåller kontakten med satelliterna även när skärmen är släckt</li>
-          <li><b>Bilder:</b> Bilder namnges med art och tidpunkt, vilket underlättar export till Artportalen eller när du vill göra en rapport.</li>
-          <li><b>Polygoner:</b> Importera eller rita egna inventeringsområden.</li>
-        </ul>
-
-        <h2>Export</h2>
-        <ul>
-          <li><b>Artportalen:</b> Direkt utan konvertering</li>
-          <li><b>Excel:</b> För vidare bearbetning</li>
-          <li><b>GeoJSON:</b> För QGIS</li>
-          <li><b>ZIP:</b> Exportera en komprimerad zip-fil med <b>karta + data + bilder</b> och skicka den till din dator.</li>
-        </ul>
-
-        <h2>Extra</h2>
-        <ul>
-          <li>Komplettera med och spara egna artförslag.</li>
-          <li>Kort artinfo om utvalda arter.</li>
-          <li class="inskjut"> <b>Vågbandad barkbock</b> <b>LC</b> <br> <i> På död gran. Larvgångar med skarp kant 5 mm. Ovalt kläckhål 4mm</i> </li>
-        </ul>
-
-        <h2>Teknik</h2>
-        <ul>
-          <li>Än så länge finns appen bara för Android. <br></li>
-          <li class="inskjut"> <b><i>Iphone-version kommer efterhand</i></b></li>
-          <li class="inskjut"></li>
-          <li>WGS84 (lat/lon)</li>
-          <li>SWEREF 99 TM </li>
-          <li>ESPG:3857 pseudomercator </li>
-          <li>Stöd för EPSG:3006, 3857 och 4326</li>
-        </ul>
-
-        <h2>Licens</h2>
-        <ul>
-          <li>Detta projekt är licensierat under MIT License. vilket betyder:</li>
-          <li class="punktfri">Varsågoda att använda min app hur ni vill. Jag tar inget ansvar för vad som händer, och ni måste tala om att det är jag som skapat den ursprungliga koden, om ni utvecklar den vidare.</li>
-          <li class="punktfri">Källkoden finns tillgänglig på <a href="https://github.com/TomasFalk64/Faltkarta" target="_blank" rel="noreferrer">GitHub</a>.</li>
-        </ul>
-      </section>
+        <nav class="site-nav" aria-label="Huvudnavigering">
+          <a href="#download">Ladda ner</a>
+          <a href="#info">Info</a>
+          <a href="#feedback">Feedback</a>
+          <a href="#donate">Donera</a>
+          <a href="#credits">Credits</a>
+        </nav>
+      </div>
+      <img class="brand-logo" src="data/logga_%20ek%20och%20hexagon.png" alt="Logga" />
     </div>
+  </header>
+
+  <main class="content">
+    <section id="download" class="card">
+      <h2>Ladda ner appen</h2>
+      <p>Använd QR-koden eller knappen för att ladda ner Fältkarta.</p>
+      <div class="qr-grid">
+        <div class="qr-card">
+          <div class="qr">
+            <img src="data/QR_faltkarta.png" alt="QR-kod för nedladdning av Fältkartan (Android)">
+          </div>
+          <div class="buttons">
+            <a class="btn download" href="https://expo.dev/accounts/tf64/projects/faltkarta/builds/3aca8746-9e8a-4855-a441-e846bcc30b0b" target="_blank" rel="noreferrer">
+              Ladda ner för Android
+            </a>
+          </div>
+        </div>
+        <div class="qr-card">
+          <div class="qr placeholder">
+            <div class="qr-empty">Version för iOS är under utveckling</div>
+          </div>
+          <div class="buttons">
+            <button class="btn download disabled" type="button" disabled>
+              Ladda ner för iPhone
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="info" class="card">
+      <h2>Vad appen gör</h2>
+      <p>Fältkarta är en mobilapp för att dokumentera artobservationer direkt i fält, självklart även utan uppkoppling.</p>
+      <p>Du kan använda egna kartor eller ladda ner från t.ex. Skogsmonitor.se.</p>
+      <p>När du är färdig exporterar du direkt till Artportalen eller till din dator, utan konvertering.</p>
+
+      <h2>Funktioner</h2>
+      <ul>
+        <li><b>Enkel registrering:</b> Snabbt formulär med artförslag. Skriv t.ex. <i>fy</i> och välj <i>Fyrflikig jordstjärna.</i></li>
+        <li><b>Egna kartor:</b> Importera valfritt antal GeoTIFF.</li>
+        <li><b>GPS:</b> Justerbar GPS-frekvens och valfri bakgrundspositionering gör att appen behåller kontakten med satelliterna även när skärmen är släckt</li>
+        <li><b>Bilder:</b> Bilder namnges med art och tidpunkt, vilket underlättar export till Artportalen eller när du vill göra en rapport.</li>
+        <li><b>Polygoner:</b> Importera eller rita egna inventeringsområden.</li>
+      </ul>
+
+      <h2>Export</h2>
+      <ul>
+        <li><b>Artportalen:</b> Direkt utan konvertering</li>
+        <li><b>Excel:</b> För vidare bearbetning</li>
+        <li><b>GeoJSON:</b> För QGIS</li>
+        <li><b>ZIP:</b> Exportera en komprimerad zip-fil med <b>karta + data + bilder</b> och skicka den till din dator.</li>
+      </ul>
+
+      <h2>Extra</h2>
+      <ul>
+        <li>Komplettera med och spara egna artförslag.</li>
+        <li>Kort artinfo om utvalda arter.</li>
+        <li class="inskjut"> <b>Vågbandad barkbock</b> <b>LC</b> <br> <i> På död gran. Larvgångar med skarp kant 5 mm. Ovalt kläckhål 4mm</i> </li>
+      </ul>
+
+      <h2>Teknik</h2>
+      <ul>
+        <li>Än så länge finns appen bara för Android.</li>
+        <li class="inskjut"> <b><i>iPhone-version kommer efterhand</i></b></li>
+        <li>WGS84 (lat/lon)</li>
+        <li>SWEREF 99 TM</li>
+        <li>EPSG:3857 pseudomercator</li>
+        <li>Stöd för EPSG:3006, 3857 och 4326</li>
+      </ul>
+
+      <h2>Licens</h2>
+      <ul>
+        <li>Detta projekt är licensierat under MIT License. vilket betyder:</li>
+        <li class="punktfri">Varsågoda att använda min app hur ni vill. Jag tar inget ansvar för vad som händer, och ni måste tala om att det är jag som skapat den ursprungliga koden, om ni utvecklar den vidare.</li>
+      </ul>
+    </section>
+
+    <section id="feedback" class="card feedback-section" aria-labelledby="feedback-title">
+      <h2 id="feedback-title">Ge feedback</h2>
+      <form class="feedback-form" id="my-form" action="https://formspree.io/f/mbdpppjl" method="POST">
+        <label class="sr-only" for="feedback-email">Din e-post</label>
+        <input 
+          type="email" 
+          name="email" 
+          id="feedback-email" 
+          placeholder="Din e-postadress (valfri)..." 
+          class="feedback-email"
+        >
+
+        <label class="sr-only" for="feedback-input">Din kommentar</label>
+        <input type="hidden" name="_subject" value="Ny feedback på Fältkartan!">
+        
+        <textarea 
+          id="feedback-input" 
+          name="message" 
+          rows="4" 
+          placeholder="Skriv din kommentar..." 
+          required
+        ></textarea>
+        
+        <div class="feedback-actions">
+          <p id="my-form-status" class="form-status"></p>
+          <button class="btn download" id="my-form-button" type="submit">Skicka feedback</button>
+        </div>
+      </form>
+
+      <h3 class="comment-title">Kommentarer</h3>
+      <div class="comment-log" id="comment-log" aria-label="Kommentarer">
+        <p class="comment-empty">Inga kommentarer ännu.</p>
+      </div>
+    </section>
+
+    <section id="donate" class="card">
+      <h2>Stöd projektet</h2>
+      <p>
+        Appen är fri från reklam. Vill du stödja utvecklingen, så bidra gärna med en frivillig
+        gåva via Swish.
+      </p>
+      <div class="qr">
+        <img src="data/swish-QR-small.png" alt="Swish QR-kod">
+        <p>Skanna QR-koden för att donera via Swish.</p>
+      </div>
+    </section>
+
+    <section id="credits" class="card">
+      <h2>Credits</h2>
+      <ul>
+        <li><b>Utvecklad av:</b> AI-agenten Codex (OpenAI)</li>
+        <li><b>Styrd av:</b> Tomas Falk</li>
+      </ul>
+    </section>
   </main>
 
-  <aside class="action-panel">
-    <div class="panel-inner">
-      <div class="buttons">
-        <button class="btn download is-active" type="button" data-target="download">Ladda ner</button>
-        <button class="btn donate" type="button" data-target="donate">Donera</button>
-      </div>
-
-      <section id="download" class="action-section is-visible">
-        <h2>Ladda ner appen</h2>
-        <p><b>Obs än så länge bara för Android.</b></p>
-        <p>Använd QR-koden eller länken för att ladda ner Fältkarta. </p>
-        <div class="qr">
-          <img src="data/QR_faltkarta.png" alt="QR-kod för nedladdning av Fältkartan">
-        </div>
-        <div class="buttons">
-          <a class="btn download" href="https://expo.dev/accounts/tf64/projects/faltkarta/builds/3aca8746-9e8a-4855-a441-e846bcc30b0b" target="_blank" rel="noreferrer">
-            Gå till nedladdning
-          </a>
-        </div>
-      </section>
-
-      <section id="donate" class="action-section">
-        <h2>Stöd projektet</h2>
-        <p>
-          Appen är fri från reklam. Vill du stödja utvecklingen, så bidra gärna med en frivillig
-          gåva via Swish.
-        </p>
-        <div class="qr">
-          <img src="data/swish-QR-small.png" alt="Swish QR-kod">
-          <p>Skanna QR-koden för att donera via Swish.</p>
-        </div>
-      </section>
-
-      <section class="feedback-section" aria-labelledby="feedback-title">
-        <h2 id="feedback-title">Ge feedback</h2>
-        <form class="feedback-form" id="my-form" action="https://formspree.io/f/mbdpppjl" method="POST">
-          <label class="sr-only" for="feedback-email">Din e-post</label>
-          <input 
-            type="email" 
-            name="email" 
-            id="feedback-email" 
-            placeholder="Din e-postadress (valfri)..." 
-            class="feedback-email"
-          >
-
-          <label class="sr-only" for="feedback-input">Din kommentar</label>
-          <input type="hidden" name="_subject" value="Ny feedback på Fältkartan!">
-          
-          <textarea 
-            id="feedback-input" 
-            name="message" 
-            rows="3" 
-            placeholder="Skriv din kommentar..." 
-            required
-          ></textarea>
-          
-          <div class="feedback-actions">
-            <p id="my-form-status" class="form-status"></p>
-            <button class="btn download" id="my-form-button" type="submit">Skicka feedback</button>
-          </div>
-        </form>
-
-        <h3 class="comment-title">Kommentarer</h3>
-        <div class="comment-log" id="comment-log" aria-label="Kommentarer">
-          <p class="comment-empty">Inga kommentarer ännu.</p>
-        </div>
-      </section>
-    </div>
-
-    <footer>
-      © Fältkarta
-    </footer>
-  </aside>
-</div>
+  <footer class="site-footer">
+    <span>© Fältkarta</span>
+    <a class="github-link" href="https://github.com/TomasFalk64/Faltkarta" target="_blank" rel="noreferrer">Visa källkod på GitHub</a>
+  </footer>
 
 <script>
-  const buttons = Array.from(document.querySelectorAll('.action-panel [data-target]'));
-  const sections = Array.from(document.querySelectorAll('.action-panel .action-section'));
-
-  function showSection(id) {
-    sections.forEach((section) => {
-      section.classList.toggle('is-visible', section.id === id);
-    });
-    buttons.forEach((btn) => {
-      btn.classList.toggle('is-active', btn.dataset.target === id);
-    });
-  }
-
-  buttons.forEach((btn) => {
-    btn.addEventListener('click', () => showSection(btn.dataset.target));
-  });
-
   const commentLog = document.getElementById('comment-log');
 
   fetch('data/kommentarer.txt')
@@ -208,15 +205,13 @@
       commentLog.innerHTML = '<p class="comment-empty">Inga kommentarer ännu.</p>';
     });
 
-  
   var form = document.getElementById("my-form");
   
   async function handleSubmit(event) {
-    event.preventDefault(); // Hindrar sidan från att laddas om
+    event.preventDefault();
     var status = document.getElementById("my-form-status");
     var data = new FormData(event.target);
     
-    // Inaktivera knappen under skickning
     var button = document.getElementById("my-form-button");
     button.disabled = true;
     button.innerText = "Skickar...";
@@ -231,7 +226,7 @@
       if (response.ok) {
         status.innerHTML = "Skickat. Tack för din feedback!";
         status.style.color = "green";
-        form.reset(); // Tömmer textrutan
+        form.reset();
       } else {
         response.json().then(data => {
           if (Object.hasOwn(data, 'errors')) {
@@ -242,7 +237,6 @@
           status.style.color = "red";
         })
       }
-      // Återställ knappen
       button.disabled = false;
       button.innerText = "Skicka feedback";
     }).catch(error => {
