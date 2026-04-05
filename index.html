@@ -92,13 +92,10 @@
 
       <section id="download" class="action-section is-visible">
         <h2>Ladda ner appen</h2>
-        <p>
-          Använd QR-koden eller länken för att ladda ner Fältkarta. 
-        </p>
         <p><b>Obs än så länge bara för Android.</b></p>
+        <p>Använd QR-koden eller länken för att ladda ner Fältkarta. </p>
         <div class="qr">
           <img src="data/QR_faltkarta.png" alt="QR-kod för nedladdning av Fältkartan">
-          <p>Skanna QR-koden för att ladda ner appen.</p>
         </div>
         <div class="buttons">
           <a class="btn download" href="https://expo.dev/accounts/tf64/projects/faltkarta/builds/3aca8746-9e8a-4855-a441-e846bcc30b0b" target="_blank" rel="noreferrer">
@@ -122,6 +119,15 @@
       <section class="feedback-section" aria-labelledby="feedback-title">
         <h2 id="feedback-title">Ge feedback</h2>
         <form class="feedback-form" id="my-form" action="https://formspree.io/f/mbdpppjl" method="POST">
+          <label class="sr-only" for="feedback-email">Din e-post</label>
+          <input 
+            type="email" 
+            name="email" 
+            id="feedback-email" 
+            placeholder="Din e-postadress (valfri)..." 
+            class="feedback-email"
+          >
+
           <label class="sr-only" for="feedback-input">Din kommentar</label>
           <input type="hidden" name="_subject" value="Ny feedback på Fältkartan!">
           
