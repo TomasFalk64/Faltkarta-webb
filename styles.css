@@ -392,3 +392,7 @@ li {
     grid-template-columns: 1fr;
   }
 }
+
+.center-text {
+  text-align: center;
+}

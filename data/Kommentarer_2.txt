@@ -1,0 +1,2 @@
+
+En sak jag ser när jag exporterar till Excel (vilket jag brukar göra för att kunna lägga till mer information om exempelvis substrat, antal fruktkroppar eller liknande) är att rubrikerna är annorlunda från Artportalens mall. Det skulle vara toppen om det gick att använda samma rubriker som i deras mall, med eventuella extrarubriker först eller sist i tabellen, så att de lätt går att hoppa över inför importen till Artportalen.
