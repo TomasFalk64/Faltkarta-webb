@@ -30,6 +30,7 @@
           <a href="#feedback">Feedback</a>
           <a href="#donate">Stöd</a>
           <a href="#credits">Om appen</a>
+          <a href="#manual">Manual</a>
         </nav>
       </div>
       <img class="brand-logo" src="data/logga_%20ek%20och%20hexagon.png" alt="Logga" />
@@ -63,12 +64,12 @@
         </div>
         <div class="qr-card">
           <div class="qr placeholder">
-            <div class="qr-empty">Version för iOS är under utveckling</div>
+            <div class="qr-empty">Version för iOS finns nu på App Store <br> <br> Version 2.7</div>
           </div>
           <div class="buttons">
-            <button class="btn download disabled" type="button" disabled>
+            <a class="btn download" href="https://apps.apple.com/se/app/f%C3%A4ltkarta/id6766901560?itscg=30200&itsct=apps_box_link&mttnsubad=6766901560" target="_blank" rel="noreferrer">
               Ladda ner för iPhone
-            </button>
+            </a>
           </div>
         </div>
       </div>
@@ -195,6 +196,67 @@
         <li>Utvecklad med hjälp av AI-agenten Codex (OpenAI) och Google Gemini</li>
       </ul>
     </section>
+
+<section id="manual" class="card">
+  <h2>Manual för Fältkarta</h2>
+  
+  <div style="background-color: #fff3cd; padding: 15px; border-radius: 5px; border-left: 5px solid #ffc107; margin-bottom: 20px;">
+  <b>Innan du börjar:</b>
+  <p>För att kunna skicka dina fynd direkt till Artportalen behöver du:</p>
+  <ul>
+    <li>Ett konto på <a href="https://www.artportalen.se" target="_blank">Artportalen.se</a>.</li>
+    <li><b>Viktigt:</b> Logga in på Artportalen via en dator, gå till <i>Mina sidor > Inställningar</i> och se till att <b>Koordinatsystem</b> är inställt på <b>SWEREF 99 TM</b>. Annars kommer dina observationer hamna på fel plats.</li>
+  </ul>
+  <li>Ladda ner <b>Fältkarta</b> från Google Play eller App Store.</li>
+
+</div>
+
+  <ul>
+    <li><b>1. Kom igång</b>
+      <ul>
+        <li>Öppna appen och följ instruktionerna för att ge nödvändiga tillstånd.</li>
+        <li><b>GPS-tillåtelse:</b> Ge appen tillåtelse att använda din plats (välj "När appen används").</li>
+      </ul>
+    </li>
+
+    <li><b>2. Ladda in karta</b>
+      <p>Du behöver ladda ner en bakgrundskarta till mobilen, antingen från en extern källa eller genom att skapa en egen.</p>
+      <ul>
+        <li><b>Från QGIS:</b> Skapa din karta. Välj <i>Projekt > Importera/Exportera > Exportera som bild</i>. Justera vid behov upplösning (DPI) och yta. Spara som <b>.tif</b>.</li>
+        <li><b>Via appen:</b> Klicka på <span style="background-color: #ff9800; color: white; padding: 2px 8px; border-radius: 4px; font-weight: bold; font-size: 1.1em; display: inline-block; margin: 0 2px; box-shadow: 1px 1px 2px rgba(0,0,0,0.2);">+</span>-knappen i appens huvudmeny.</li>
+        <li><b>Öppna webbläsaren:</b> Tar dig till Skogsmonitor.se där du kan ladda ner färdiga kartbilder.</li>
+        <li><span style="background-color: #003366; color: white; padding: 2px 8px; border-radius: 4px; font-weight: bold; font-size: 0.9em; display: inline-block; margin-right: 5px; box-shadow: 1px 1px 2px rgba(0,0,0,0.2);">Ladda från enhet</span> Välj den sparade kartfilen (.tif) från mobilens minne.</li>
+        <li><span style="background-color: #003366; color: white; padding: 2px 8px; border-radius: 4px; font-weight: bold; font-size: 0.9em; display: inline-block; margin-right: 5px; box-shadow: 1px 1px 2px rgba(0,0,0,0.2);">Namnge kartan</span> Ge kartan ett tydligt namn. Detta namn följer med som projektbeteckning vid export till Artportalen.</li>        <li><i>Tips: Du kan ändra namn i efterhand genom att klicka på de tre prickarna bredvid kartans namn.</i></li>
+      </ul>
+    </li>
+
+    <li><b>3. Registrera observationer</b>
+      <ul>
+        <li><b>Navigera:</b> När du öppnat kartan kan du zooma och flytta den. <b>Hårkorset</b> i mitten visar var observationen hamnar.</li>
+        <li><b>Registrera:</b> Klicka på <b>knappnålen</b>. Börja skriva artnamnet och välj från förslagslistan för att få korrekt vetenskapligt namn.</li>
+        <li><b>Information:</b> Klicka på "Rödlistestatus" för att se artens bevarandestatus.</li>
+        <li><b>Formulär:</b> Fyll i beskrivning, antal och andra fält. Spara med den <b>gröna check-knappen</b> eller radera med den <b>röda soptunnan</b>.</li>
+        <li><b>Positionering:</b> Klicka på <b>pil-knappen</b> för att centrera kartan på din nuvarande plats. Om <b>Följ</b> är aktiverat rör sig kartan automatiskt när du går.</li>
+        <li><b>Riktning:</b> Klicka på <b>kompassrosen</b> för att se åt vilket håll du rör dig.</li>
+      </ul>
+    </li>
+
+    <li><b>4. Exportera data</b>
+      <ul>
+        <li>Gå tillbaka till huvudmenyn, klicka på de tre prickarna bredvid din karta och välj <b>Export</b>.</li>
+        <li>Välj format: <b>Excel, GeoJSON eller ZIP</b> för bearbetning på dator, eller direkt till <b>Artportalen</b>.</li>
+        <li><b>Export till Artportalen:</b> 
+          <ol>
+            <li>Logga in med ditt konto i vyn som öppnas.</li>
+            <li>Klicka i inmatningsfältet, håll kvar fingret i en sekund och välj <b>Klistra in</b> (appen har kopierat dina fynd automatiskt).</li>
+            <li>Klicka på den gröna knappen för att skicka.</li>
+            <li><b>Viktigt:</b> Du måste fortfarande logga in på Artportalens hemsida efteråt för att slutgiltigt bekräfta och publicera dina observationer.</li>
+          </ol>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</section>
   </main>
 
   <footer class="site-footer">
