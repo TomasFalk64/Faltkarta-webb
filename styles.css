@@ -396,3 +396,96 @@ li {
 .center-text {
   text-align: center;
 }
+
+.manual-section {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  margin-bottom: 40px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #eee;
+}
+
+.manual-content {
+  flex: 2;
+  min-width: 300px;
+}
+
+.manual-aside {
+  flex: 0 0 180px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.manual-aside img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  border: 1px solid #ddd;
+}
+
+.img-caption {
+  font-size: 0.75em;
+  color: #666;
+  text-align: center;
+  margin-bottom: 5px;
+}
+
+.manual-warning {
+  background-color: #fff3cd;
+  padding: 15px;
+  border-radius: 5px;
+  border-left: 5px solid #ffc107;
+  margin-bottom: 20px;
+}
+
+.manual-pill-plus {
+  background-color: #ff9800;
+  color: #fff;
+  padding: 2px 8px;
+  border-radius: 4px;
+  font-weight: bold;
+  font-size: 1.1em;
+  display: inline-block;
+  margin: 0 2px;
+  box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+.manual-pill {
+  background-color: #003366;
+  color: #fff;
+  padding: 2px 8px;
+  border-radius: 4px;
+  font-weight: bold;
+  font-size: 0.9em;
+  display: inline-block;
+  margin-right: 5px;
+  box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+.manual-section-last {
+  border-bottom: none;
+}
+
+@media (max-width: 768px) {
+  .manual-section {
+    flex-direction: column;
+  }
+
+  .manual-aside {
+    flex-direction: row;
+    flex: 1;
+    justify-content: center;
+  }
+
+  .manual-aside img {
+    width: 45%;
+  }
+}
+
+.manual-content h3 {
+  margin-top: 80px; /* Skapar luft ovanför rubriken */
+  margin-bottom: 10px; /* Skapar lagom avstånd till listan under */
+}
