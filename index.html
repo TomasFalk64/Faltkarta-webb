@@ -133,9 +133,9 @@
           </ul>
         </div>
         <aside class="info-side" aria-label="Skärmbilder">
-          <img src="data/Screenshot_20260405_162735_Fltkarta.jpg" alt="Skärmbild av Fältkarta">
+          <img src="data\Screenshot_20260509_125135_Fltkarta.jpg" alt="Skärmbild av Fältkarta">
           <img src="data/Screenshot_20260405_161929_Fltkarta.jpg" alt="Skärmbild av Fältkarta">
-          <img src="data/Screenshot_20260405_163516_Fltkarta.jpg" alt="Skärmbild av Fältkarta">
+          <img src="data\Screenshot_20260509_125830_Fltkarta.jpg" alt="Skärmbild av Fältkarta">
         </aside>
       </div>
     </section>
@@ -225,7 +225,7 @@
         <li><b>Via appen:</b> Klicka på <span class="manual-pill-plus">+</span>-knappen i appens huvudmeny.</li>
         <li><span class="manual-pill">Öppna webbläsaren </span>Tar dig till skogsmonitor.se där du kan ladda ner färdiga kartbilder.</li>
         <li><span class="manual-pill">Ladda från enhet</span> Välj den sparade kartfilen (.tif) från mobilens minne.</li>
-        <li><span class="manual-pill">Namnge kartan</span> Ge kartan ett tydligt namn. Detta namn används som projektbeteckning vid export.</li>
+        <li> Ge kartan ett tydligt namn. Detta namn används som projektbeteckning vid export.</li>
         <li><i>Tips: Ändra namn i efterhand via de tre prickarna bredvid kartans namn.</i></li>
       </ul>
     </div>
@@ -241,16 +241,32 @@
       <h3>3. Registrera observationer</h3>
       <ul>
         <li><b>Navigera:</b> När du öppnat kartan kan du zooma och flytta den. <b>Hårkorset</b> i mitten visar var observationen hamnar.</li>
-        <li><b>Registrera:</b> Klicka på <b>knappnålen</b>. Börja skriva artnamnet och välj från förslagslistan.</li>
-        <li><b>Information:</b> Klicka på "Rödlistestatus" för att se artens bevarandestatus.</li>
-        <li><b>Formulär:</b> Fyll i beskrivning, antal m.m. Spara med <b>grön check-knapp</b> eller radera med <b>röd soptunna</b>.</li>
-        <li><b>Positionering:</b> Klicka på <b>pil-knappen</b> för att centrera på din plats. Om <b>Följ</b> är aktiverat rör sig kartan med dig.</li>
-        <li><b>Riktning:</b> Klicka på <b>kompassrosen</b> för att se din färdriktning.</li>
+        <li>
+          <b>Registrera:</b> Klicka på <b>knappnålen</b> 
+          <span style="background-color: #4b587a; color: white; width: 24px; height: 24px; border-radius: 6px; font-size: 0.9em; display: inline-flex; align-items: center; justify-content: center; vertical-align: middle;">📍</span>. 
+          Börja skriva artnamnet och välj från förslagslistan.
+        </li>
+        <li><b>Information:</b> Klicka på symbolen för"Rödlistestatus" för att se kort information om arten.</li>
+        <li><b>Formulär:</b> Fyll i beskrivning, antal m.m. Spara med 
+          <span style="background-color: white; color: #28a745; border: 1px solid #ddd; padding: 4px 6px; border-radius: 50%; font-size: 0.9em; display: inline-block; line-height: 1; box-shadow: 1px 1px 2px rgba(0,0,0,0.1); vertical-align: middle; font-weight: bold;">✓</span> 
+           eller radera med 
+          <span style="background-color: white; color: #dc3545; border: 1px solid #ddd; padding: 4px 6px; border-radius: 50%; font-size: 0.9em; display: inline-block; line-height: 1; box-shadow: 1px 1px 2px rgba(0,0,0,0.1); vertical-align: middle;">🗑</span> 
+          . Du kan alltid gå tillbaka och redigera observationer genom att klicka på dem i kartan eller i listan. <br> 
+          <i>Tips: Om du vil ha med mer fakta som "Aktivitet" eller "Substrat" kan du sedan skicka excelfilen till dig själv och lägga till det du vill komplettera med.</i>
+        </li>  
+        <li><b>Foton:</b> Du kan lägga till upp till tre foton till din observation. Bilderna får namn efter art och tidpunkt vilket gör att det är lättare att para ihop bilderna med observationer i Artportalen. Bilder kan exporteras som zip-fil tillsammans med excellista och karta.</li>  
+        <li>
+          <b>Riktning:</b> Klicka på <b>kompassrosen</b> 
+          <span style="background-color: #003366; width: 24px; height: 24px; border-radius: 6px; display: inline-flex; align-items: center; justify-content: center; vertical-align: middle; overflow: hidden;">
+            <img src="data/kompass.png" alt="Kompass" style="width: 100%; height: 100%; object-fit: contain;">
+          </span> 
+          för att se åt vilket håll du rör dig.
+        </li>      
       </ul>
     </div>
     <div class="manual-aside">
       <img src="data\IMG_0030.PNG" alt="Skärmbild kartvy">
-      <img src="data\Screenshot_20260405_162646_Fltkarta.jpg"" alt="Skärmbild formulär"> <!-- Byt ut YYYY mot rätt filnamn -->
+      <img src="data\IMG_0036.PNG" alt="Skärmbild formulär"> 
     </div>
   </div>
 
@@ -260,20 +276,40 @@
       <h3>4. Exportera data</h3>
       <ul>
         <li>Gå tillbaka till huvudmenyn, klicka på de tre prickarna bredvid din karta och välj <b>Export</b>.</li>
-        <li>Välj format: <b>Excel, GeoJSON eller ZIP</b> för dator, eller direkt till <b>Artportalen</b>.</li>
-        <li><b>Export till Artportalen:</b> 
+        <li>Du kan nu exportera direkt till <b>Artportalen</b>, skicka en <b>Excelfil</b> till dig själv eller skicka en kompromerad <b>Zip-fil</b> med karta, observationer och bilder.</li>
+      </ul>
+      <ul>
+        <span class="manual-pill" style="margin-top: 20px; margin-bottom: 10px;">Kopiera till Artportalen</span>
           <ol>
+            <li>Dina observationer kopieras till urklipp och du dirigeras till Artportalens hemsida där du kan klistra in observationerna med "paste"</li>
             <li>Logga in med ditt konto i vyn som öppnas.</li>
             <li>Klicka i inmatningsfältet, håll kvar fingret i en sekund och välj <b>Klistra in</b>.</li>
             <li>Klicka på den gröna knappen för att skicka.</li>
             <li><b>Viktigt:</b> Du måste fortfarande logga in på Artportalens hemsida efteråt för att bekräfta dina observationer.</li>
           </ol>
-        </li>
+      </ul>
+      <ul>
+        <span class="manual-pill pill-orange" style="margin-top: 20px; margin-bottom: 10px;" >Exportera Excelfil</span>
+          <ol>
+            <li>Här kan nu exportera en Excelfil med dina observationer.</li>
+            <li>Välj tex. mail eller annan social media som Signal</li>
+            <li>Du kan sedan öppna excelfilen på din dator och komplettera informationen.</li>
+            <li>När du är klar kan du till sist markera din data "ctrl-C" eller "cmd-C". gå till Artportalen och klistara in med paste "ctrl-V" eller "cmd-V" "</li>
+          </ol>
+      </ul>
+      <ul>
+        <span class="manual-pill pill-lila" style="margin-top: 20px; margin-bottom: 10px;">Exportera ZIP med bilder och GeoJson</span>
+          <ol>
+            <li>Dina observationer, din karta och dina bilder läggs i en zipfil som du kan skicka till dig själv. </li>
+            <li>Enklast är förmodligen ICloud eller Goggle Drive</li>
+            <li>Du kan sedan öppna zipfilen och använda innehållet enligt dina behov.</li>
+            <li> Vill du t.ex. lägga in bilder i Artportalen så ligger de i en undermapp "Bilder" och har namngetts med art och tidpunkt</li>
+          </ol>
       </ul>
     </div>
     <div class="manual-aside">
       <img src="data\IMG_0033.PNG" alt="Skärmbild exportmenyn">
-      <img src="data\IMG_0033.PNG"" alt="Skärmbild artportalen"> <!-- Byt ut ZZZZ mot rätt filnamn -->
+      <img src="data\IMG_0033.PNG" alt="Skärmbild artportalen"> <!-- Byt ut ZZZZ mot rätt filnamn -->
     </div>
   </div>
 </section>
@@ -307,7 +343,7 @@
         wrapper.className = 'comment';
 
         const p = document.createElement('p');
-        p.textContent = line;
+        p.innerHTML = line;
 
         wrapper.appendChild(p);
         commentLog.appendChild(wrapper);

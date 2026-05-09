@@ -1,12 +1,14 @@
 ﻿Vilken bra app
 
-Vore bra med kompassriktning, att ens position är märkt med en liten pil, så att man vet åt vilket väderstreck man kollar.
+Vore bra att kunna importera geo-PDF som kartbild
+
+Vore bra med kompassriktning, att ens position är märkt med en liten pil, så att man vet åt vilket väderstreck man kollar. <b>[Implementerat i v2.7]</b>
 
 När man lägger till bilder till ett fynd, skulle jag gärna se att det gick att markera flera bilder samtidigt. Nu får man öppna dialogen flera gånger.
 
-När jag har lagt in en koordinat och fortsätter röra mig vore det toppen om appen följer min position, så att nästa fynd automatiskt hamnar på rätt ställe.
+När jag har lagt in en koordinat och fortsätter röra mig vore det toppen om appen följer min position, så att nästa fynd automatiskt hamnar på rätt ställe. <b>[Implementerat i v2.7]</b>
 
-En sak jag ser när jag exporterar till Excel (vilket jag brukar göra för att kunna lägga till mer information om exempelvis substrat, antal fruktkroppar eller liknande) är att rubrikerna är annorlunda från Artportalens mall. Det skulle vara toppen om det gick att använda samma rubriker som i deras mall, med eventuella extrarubriker först eller sist i tabellen, så att de lätt går att hoppa över inför importen till Artportalen.
+En sak jag ser när jag exporterar till Excel (vilket jag brukar göra för att kunna lägga till mer information om exempelvis substrat, antal fruktkroppar eller liknande) är att rubrikerna är annorlunda från Artportalens mall. Det skulle vara toppen om det gick att använda samma rubriker som i deras mall, med eventuella extrarubriker först eller sist i tabellen, så att de lätt går att hoppa över inför importen till Artportalen. <b>[Implementerat i v2.7]</b>
 
 
 
