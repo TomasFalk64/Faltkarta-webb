@@ -44,17 +44,9 @@
       <div class="qr-grid">
         <div class="qr-card">
           <div class="qr placeholder">
-            <div class="qr-empty">Android-versionen finns nu på Google Play. <br> <br> Version 2.7</div>
+            <div class="qr-empty">Android-versionen finns nu på Google Play. <br> <br> Version 3.3</div>
           </div>
-          
-           <!--
-          <div class="buttons">
-            <button class="btn download disabled" type="button" disabled>
-              Ladda ner för Android
-            </button>
-          </div>
-          -->
-          
+                
           <div class="buttons">
             <a class="btn download" href="https://play.google.com/store/apps/details?id=com.tf64.faltkarta&hl=sv" target="_blank" rel="noreferrer">
               Ladda ner för Android
@@ -64,7 +56,7 @@
         </div>
         <div class="qr-card">
           <div class="qr placeholder">
-            <div class="qr-empty">Version för iOS finns nu på App Store <br> <br> Version 2.7</div>
+            <div class="qr-empty">Version för iOS finns nu på App Store <br> <br> Version 3.3</div>
           </div>
           <div class="buttons">
             <a class="btn download" href="https://apps.apple.com/se/app/f%C3%A4ltkarta/id6766901560?itscg=30200&itsct=apps_box_link&mttnsubad=6766901560" target="_blank" rel="noreferrer">
@@ -95,7 +87,8 @@
           <h2>Export</h2>
           <ul>
             <li><b>Artportalen:</b> Direkt utan konvertering</li>
-            <li class="inskjut"> <i>OBS kräver SWEREF99 som inställning i Artportalen</i> :</li>
+            <li class="inskjut"> <i>OBS!  Du behöver samma koordinatsystem i appen och hos Artportalen <br> Du väljer koordindatsystem i inställningar, klicka ⚙️, SWEREF99 är förvalt. <br> 
+            Hos artportalen ändrar du koordinatsystem genom att klicka på ditt namn efter att du loggat in.</i> </li>
             <li><b>Excel:</b> För vidare bearbetning</li>
             <li><b>GeoJSON:</b> För QGIS</li>
             <li><b>ZIP:</b> Exportera en komprimerad zip-fil med <b>karta + data + bilder</b> och skicka den till din dator.</li>
@@ -203,7 +196,7 @@
     <p>För att kunna skicka dina fynd direkt till Artportalen behöver du:</p>
     <ul>
       <li>Ett konto på <a href="https://www.artportalen.se" target="_blank">Artportalen.se</a>.</li>
-      <li><b>Viktigt:</b> Logga in på Artportalen via en dator, gå till <i>Mina sidor > Inställningar</i> och se till att <b>Koordinatsystem</b> är inställt på <b>SWEREF 99 TM</b>.</li>
+      <li><b>Viktigt:</b> Logga in på Artportalen via en dator, gå till <i>Mina sidor > Inställningar</i> och se till att <b>Koordinatsystem</b> är inställt på samma som i appen , förslagsvis <b>SWEREF 99 TM</b>.</li>
       <li>Ladda ner <b>Fältkarta</b> från Google Play eller App Store.</li>
     </ul>
   </div>
@@ -251,7 +244,7 @@
            eller radera med 
           <span style="background-color: white; color: #dc3545; border: 1px solid #ddd; padding: 4px 6px; border-radius: 50%; font-size: 0.9em; display: inline-block; line-height: 1; box-shadow: 1px 1px 2px rgba(0,0,0,0.1); vertical-align: middle;">🗑</span> 
           . Du kan alltid gå tillbaka och redigera observationer genom att klicka på dem i kartan eller i listan. <br> 
-          <i>Tips: Om du vill ha med mer fakta som "Aktivitet" eller "Substrat" kan du sedan skicka excelfilen till dig själv och lägga till det du vill komplettera med.</i>
+          
         </li>  
         <li><b>Foton:</b> Du kan lägga till upp till tre foton till din observation. Bilderna får namn efter art och tidpunkt vilket gör att det är lättare att para ihop bilderna med observationer i Artportalen. Bilder kan exporteras som zip-fil tillsammans med excellista och karta.</li>  
         <li>
@@ -260,7 +253,14 @@
             <img src="data/kompass.png" alt="Kompass" style="width: 100%; height: 100%; object-fit: contain;">
           </span> 
           för att se åt vilket håll du rör dig.
-        </li>      
+        </li>  
+        <li>
+          <b>Dropdown: </b> I inställningar kan du välja vilka inmatningsfält du vill visa <br>
+          Det finns dropdown-alternativ för fälten "Enhet", "Aktivitet", "Substrat", "Kön" och "Ålder-stadium". <br>
+          Alternativen som visas varierar beroende på vilken artgrupp din art hör till.
+        </li>
+        
+
       </ul>
     </div>
     <div class="manual-aside">
@@ -273,6 +273,11 @@
   <div class="manual-section manual-section-last">
     <div class="manual-content">
       <h3>4. Exportera data</h3>
+      <i>
+      <p>OBS!  Du behöver samma koordinatsystem i appen och hos Artportalen<br>
+      Du väljer koordindatsystem i inställningar, klicka ⚙️, SWEREF99 är förvalt.<br>
+      Hos artportalen ändrar du koordinatsystem genom att klicka på ditt namn efter att du loggat in.</p>
+      </i>
       <ul>
         <li>Gå tillbaka till huvudmenyn, klicka på de tre prickarna bredvid din karta och välj <span class="manual-pill">Export</span>.</li>
         <li>Du kan du exportera direkt till <b>Artportalen</b>, skicka en <b>Excelfil</b> till dig själv eller skicka en komprimerad <b>Zip-fil</b> med karta, observationer och bilder.</li>
@@ -290,7 +295,7 @@
       <ul>
         <span class="manual-pill pill-orange" style="margin-top: 20px; margin-bottom: 10px;" >Exportera Excelfil</span>
           <ol>
-            <li>Här kan nu exportera en Excelfil med dina observationer.</li>
+            <li>Här kan nu exportera en Excelfil med dina observationer. Och du får också med fältnnteckningar om området om du gjort sådana</li>
             <li>Välj t.ex. mail eller annan social media som Signal</li>
             <li>Du kan sedan öppna excelfilen på din dator och komplettera informationen.</li>
             <li>När du är klar kan du till sist markera din data "ctrl-C" eller "cmd-C". Gå till Artportalen och klistra in med paste "ctrl-V" eller "cmd-V" "</li>
@@ -299,7 +304,7 @@
       <ul>
         <span class="manual-pill pill-lila" style="margin-top: 20px; margin-bottom: 10px;">Exportera ZIP med bilder och GeoJson</span>
           <ol>
-            <li>Dina observationer, din karta och dina bilder läggs i en zip-fil som du kan skicka till dig själv. </li>
+            <li>Dina observationer, dina anteckningar, karta och bilder läggs i en zip-fil som du kan skicka till dig själv. </li>
             <li>Enklast är förmodligen iCloud eller Google Drive</li>
             <li>Du kan sedan öppna zip-filen och använda innehållet enligt dina behov.</li>
             <li> Vill du t.ex. lägga in bilder i Artportalen så ligger de i en undermapp "Bilder" och har namngivits med art och tidpunkt</li>

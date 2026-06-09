@@ -1,6 +1,22 @@
-﻿Vilken bra app
+﻿Vore bra att kunna importera geo-PDF som kartbild <b>[Framtida utveckling]</b>
 
-Vore bra att kunna importera geo-PDF som kartbild
+Bakgrundskarta som laddas in automatiskt <b>[Framtida utveckling]</b
+
+Exportera i andra koordinatstsystem som AP har stöd för, särskilt WGS84 <b>[ Val mellan WGS84 och SWEREF99 Finns i version 3.3]</b
+
+När man klickar 'Ny punktobservation', autofokusera på Artnamn-fältet. <b>[v 3.3]</b
+
+Låt en kopiera fyndets koordinater. Blir då betydligt smidigare att dela enskilda fynd. <b>[Finns i version 3.3, via listan över artfynd]</b
+
+Att man kan bocka av när man rapporterat en kartas fynd till AP. Kanske en annan bock för att man backat upp kartan <b>[Finns i version 3.3, via tre-prickar i kartlistan]</b
+
+Man får  med "Rödlistning" som ett fält när man exporterar fynd via excel <b>[Borttaget från v3.3, men rödlistning finns i geojson-filen]</b
+
+Kommentarsfält för varje Fältkarta <b>[I v 3.3 går det att skriva Anteckningar om området, tex habitattyp, visas som symbol under kartnamnet]</b
+
+Valbara alternativ för tex aktivitet, kön mm baseras på artgrupp <b>[v 3.3]</b
+
+Det tar lång tid att läsa in en stor detaljerad  kartfil <b>[går på några sekunder fr.o.m. v 3.3]</b
 
 Vore bra med kompassriktning, att ens position är märkt med en liten pil, så att man vet åt vilket väderstreck man kollar. <b>[Implementerat i v2.7]</b>
 
@@ -10,5 +26,5 @@ När jag har lagt in en koordinat och fortsätter röra mig vore det toppen om a
 
 En sak jag ser när jag exporterar till Excel (vilket jag brukar göra för att kunna lägga till mer information om exempelvis substrat, antal fruktkroppar eller liknande) är att rubrikerna är annorlunda från Artportalens mall. Det skulle vara toppen om det gick att använda samma rubriker som i deras mall, med eventuella extrarubriker först eller sist i tabellen, så att de lätt går att hoppa över inför importen till Artportalen. <b>[Implementerat i v2.7]</b>
 
-
+Vilken bra app
 
